@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Styling the main App wrapper
+*/
+:root * {
+  /* font-size: 4vw; */
+  /* @apply !text-sm xs:!text-base; */
+}
+
+body {
+  @apply lg:bg-grey-600;
+}
+
+/* Global Custom Styles */
+main.app {
+  @apply flex flex-col gap-3 overflow-x-hidden py-3 sm:gap-4;
+  @apply min-h-screen bg-white lg:shadow-lg;
+  /* @apply flex flex-col gap-3 xs:gap-4 py-3 xxs:px-4 xs:px-5; */
+}
+
+/* 
+  Used to stack table cells vertically
+  <Tables className="vertical" />
+*/
+table.vertical tr,
+table.vertical th {
+  @apply flex !h-auto flex-col-reverse;
+}
+
+table.vertical td {
+  @apply first-of-type:pt-0 last-of-type:pb-0;
+}
+
+/* TODO: The inset focus effect is working on only one cell 
+    Possible fix with JS?
+*/
+table.vertical td:focus {
+  box-shadow: inset 3px 0 0 0 #1f73b7 !important;
+}
+
+/* 
+  Customize ZD Accordion
+  TODO: Overflow issue being caused by panel
+*/
+[aria-hidden='false'] > [data-garden-id='accordions.step_inner_panel'] {
+  @apply !overflow-visible;
+}
+
+/* 
+  Dark Mode support
+  TODO: Update styles to get in a better spot
+*/
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+    @apply !bg-grey-800;
+  }
+  body,
+  main.app {
+    @apply bg-grey-800 text-white;
+  }
+  input,
+  textarea {
+    @apply !bg-white/20 text-white;
+  }
+  [data-garden-id='accordions.panel'] {
+    @apply bg-white/10 !text-white;
+  }
+  [data-garden-id='forms.radio_svg'] {
+    @apply bg-white/10;
+  }
+} */

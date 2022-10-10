@@ -9,16 +9,25 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@zendeskgarden/css-bedrock": "^9.0.0",
+    "@zendeskgarden/react-dropdowns": "^8.57.1",
+    "@zendeskgarden/react-grid": "^8.57.1",
+    "@zendeskgarden/react-theming": "^8.57.1",
+    "lodash": "^4.17.21",
+    "lodash.debounce": "^4.0.8",
     "next": "12.3.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
+    "@types/lodash.debounce": "^4.0.7",
     "@types/node": "18.8.3",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "eslint": "8.25.0",
     "eslint-config-next": "12.3.1",
+    "tailwindcss": "^3.1.8",
     "typescript": "4.8.4"
   }
 }
